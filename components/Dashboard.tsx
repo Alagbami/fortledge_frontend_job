@@ -11,7 +11,7 @@ import RatingOverview from './RatingOverview'
 
 export default function Dashboard() {
   return (
-    <div className="flex min-h-screen bg-background">
+    <div className="flex min-h-screen bg-[#FFFFFF]">
       {/* Sidebar */}
       <Sidebar />
 
