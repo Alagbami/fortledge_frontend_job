@@ -9,8 +9,8 @@ interface RatingCircleProps {
 
 export default function RatingCircle({ percentage, label, color, size }: RatingCircleProps) {
   const sizeClasses = {
-    small: 'w-36 h-36',
-    large: 'w-56 h-56'
+    small: 'w-32 h-32',
+    large: 'w-48 h-48'
   }
 
   const colorClasses = {
@@ -20,16 +20,16 @@ export default function RatingCircle({ percentage, label, color, size }: RatingC
   }
 
   return (
-    <div className={`${sizeClasses[size]} relative`}>
-      {/* Outer white border with shadow */}
-      <div className="absolute inset-0 rounded-full bg-white shadow-lg"></div>
+    <div className={`${sizeClasses[size]} relative font-poppins`}>
+      {/* Outer white border */}
+      <div className="absolute inset-0 rounded-full border-[3px] border-gray-200"></div>
       
-      {/* Colored circle with inner border */}
-      <div className={`absolute inset-[6px] rounded-full ${colorClasses[color]} border-[3px] border-white/30 flex flex-col items-center justify-center shadow-inner`}>
-        <span className={`${size === 'large' ? 'text-5xl' : 'text-3xl'} font-bold text-white`}>
+      {/* Colored circle with inner white border */}
+      <div className={`absolute inset-[3px] rounded-full ${colorClasses[color]} border-[2px] border-white flex flex-col items-center justify-center`}>
+        <span className={`${size === 'large' ? 'text-4xl' : 'text-2xl'} font-bold text-white leading-none`}>
           {percentage}%
         </span>
-        <span className={`${size === 'large' ? 'text-base' : 'text-sm'} text-white mt-1`}>
+        <span className={`${size === 'large' ? 'text-sm' : 'text-xs'} text-white mt-1 font-normal`}>
           {label}
         </span>
       </div>

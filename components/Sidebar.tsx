@@ -50,7 +50,7 @@ export default function Sidebar() {
               className={clsx(
                 'w-full flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200',
                 activeItem === item.id
-                  ? 'bg-primary text-white shadow-md'
+                  ? 'bg-primary-500/80 text-white shadow-md'
                   : 'text-gray-600 hover:bg-gray-200/50'
               )}
             >
